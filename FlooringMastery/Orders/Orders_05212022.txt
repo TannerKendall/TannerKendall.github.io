@@ -1,0 +1,2 @@
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total
+1,tanner,OH,90.00,ShagCarpet,70.00,2.50,3.50,175.00,245.00,378.00,798.00

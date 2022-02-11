@@ -1,0 +1,7 @@
+TX,Texas,4.45
+WA,Washington,9.25
+KY,Kentucky,6.00
+CA,California,25.00
+OH,Ohio,90.00
+xx,xx,xx
+WY,Wyoming,15.00

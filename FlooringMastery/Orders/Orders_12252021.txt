@@ -1,0 +1,2 @@
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total
+1,tanner,WA,9.25,Carpet,65.00,2.25,2.10,146.25,136.50,26.15,308.90

@@ -1,0 +1,7 @@
+Carpet,2.25,2.10
+Laminate,1.75,2.10
+Tile,3.50,4.15
+Wood,5.15,4.75
+ShagCarpet,2.50,3.50
+xx,xx,xx
+HardWood,3.00,4.50
