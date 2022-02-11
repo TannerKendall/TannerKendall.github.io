@@ -1,0 +1,15 @@
+com\tk\guessthenumber\controllers\GuessTheNumberControllerExceptionHandler.class
+com\tk\guessthenumber\models\Game.class
+com\tk\guessthenumber\dao\RoundDao.class
+com\tk\guessthenumber\dao\GameDaoDB.class
+com\tk\guessthenumber\dao\GameDao.class
+com\tk\guessthenumber\servicelayer\GuessTheNumberServiceLayer.class
+com\tk\guessthenumber\servicelayer\GuessTheNumberServiceLayerImpl.class
+com\tk\guessthenumber\controllers\Error.class
+com\tk\guessthenumber\dao\RoundDaoDB.class
+com\tk\guessthenumber\App.class
+com\tk\guessthenumber\dao\GameDaoDB$GameMapper.class
+com\tk\guessthenumber\TestApplicationConfiguration.class
+com\tk\guessthenumber\models\Round.class
+com\tk\guessthenumber\dao\RoundDaoDB$RoundMapper.class
+com\tk\guessthenumber\controllers\GuessTheNumberController.class

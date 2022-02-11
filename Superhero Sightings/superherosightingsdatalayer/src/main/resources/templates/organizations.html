@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <div th:replace="htmlInserts/head"></div>
+  </head>
+  <body>
+    <!-- Main Body of Page -->
+
+    <div class="container">
+        <!--Header-->
+        <div class="row m-4">
+            <div id="header" class="col text-center nes-container is-rounded">
+                <h1>Organizations</h1>
+            </div>
+        </div>
+        <!--End Header-->
+    
+        <!--nav-->
+        <div th:replace="htmlInserts/navbar"></div>
+        <!--End Nav-->
+        
+        <!--Add Button-->
+        <div class="row m-4">
+            <div class="col text-left m-2">
+                <a href="organization/addOrganization" class="btn btn-primary btn-lg">Add Organization</a>
+            </div>
+        </div>
+        <!--End Button-->
+        
+        <!--Table-->
+        <div class="row m-4">
+            <div class="col nes-container is-rounded m-3">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Organization Name</th>
+                            <th>Alignment</th>
+                            <th>Details</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="organization : ${organizations}">
+                            <td th:text="${organization.id}">Organization ID</td>
+                            <td th:text="${organization.name}">Organization Name</td>
+                            <td th:if="${organization.isHero}">Superhero</td>
+                            <td th:unless="${organization.isHero}">Supervillain</td>
+                            
+                            <td><a href="#" th:href="@{/organization/detailsOrganization(id=${organization.id})}">Details</a></td>
+                            <td><a href="#" th:href="@{/organization/editOrganization(id=${organization.id})}">Edit</a></td>
+                            <td><a href="#" onclick="return confirm('Are you sure you wish to delete the Organization?')" th:href="@{/organization/deleteOrganization(id=${organization.id})}">Delete</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!--End table-->
+    
+        
+    </div>
+    <!-- End main body -->
+    
+    <div th:replace="htmlInserts/endingScripts"></div>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+
+#itemsDiv {
+    border: solid;
+    padding: 2px;
+    margin: 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    height: 100vh;
+    flex: 1 0 25%;
+}
+

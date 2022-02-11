@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <div th:replace="htmlInserts/head"></div>
+  </head>
+  <body>
+    <!-- Main Body of Page -->
+
+    <div class="container">
+        
+        <!--Header-->
+        <div class="row m-4">
+            <div id="header" class="col text-center nes-container is-rounded">
+                <h1>Edit Superhero</h1>
+            </div>
+        </div>
+        <!--End Header-->
+        
+        <!--nav-->
+        <div th:replace="htmlInserts/navbar"></div>
+        <!--End Nav-->
+        
+        <!--Insights-->
+        <!--End Insights-->
+        
+        <!--Edit form-->
+        <div class="row m-4 nes-container with-title">
+            <p class="title">Edit Superhero</p>
+            
+            <div class="col-12 text-center m-3">
+                <form action="editSuperhero" method="POST" enctype="multipart/form-data">
+                    
+                    <input type="hidden" name="id" th:value="${superhero.id}" id="id"/>
+                    
+                    <div class="form-group row">
+                        <label for="name" class="col-3 col-form-label">Name</label>
+                        
+                        <div class="col-9">
+                            
+                            <div th:if="${#fields.hasErrors('superhero.name')}">
+                                <p th:each="error : ${#fields.errors('superhero.name')}" class="alert alert-danger" 
+                                   th:text="${error}"></p>
+                            </div>
+                            
+                            <input type="text" name="name" th:value="${superhero.name}" id="name" class="form-control"/>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label for="isHero" class="col-3 col-form-label">Alignment</label>
+                        
+                        <div class="col-9">
+                            <select id="isHero" name="isHero" class="form-control">
+                                <option value="true" th:selected="${superhero.isHero}">Hero</option>
+                                <option value="false" th:selected="${!superhero.isHero}">Villain</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label for="description" class="col-3 col-form-label">Description</label>
+                        
+                        <div class="col-9">
+                            
+                            <div th:if="${#fields.hasErrors('superhero.description')}">
+                                <p th:each="error : ${#fields.errors('superhero.description')}" class="alert alert-danger" 
+                                   th:text="${error}"></p>
+                            </div>
+                            
+                            <textarea type="textArea" name="description" 
+                                      th:text="${superhero.description}" 
+                                      id="description" 
+                                      class="form-control"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label for="superpower" class="col-3 col-form-label">Superpowers</label>
+                        
+                        <div class="col-9">
+                            <select multiple id="superpowerId" name="superpowerId" class="form-control">
+                                <option th:each="superpower : ${superpowers}"
+                                        th:value="${superpower.id}"
+                                        th:text="${superpower.name}">Superpower Name</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label for="image" class="col-3 col-form-label">Image</label>
+                        <div class="col-9">
+                            <input type="file" id="image" name="image" accept="image/png, image/jpeg"/>
+                        </div>
+                    </div>
+                    
+                    <div class="row m-4">
+                        <div class="col text-center m-4">
+                            <a href="/superheroes" class="btn nes-btn is-error btn-lg">Back</a>
+                        </div>
+                        
+                        <button type="submit" class="col m-4 nes-btn is-success btn-lg">Edit Superhero</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+        <!--End Form-->
+        
+    </div>
+    
+    <!-- End main body -->
+    
+    <div th:replace="htmlInserts/endingScripts"></div>
+  </body>
+</html>
+

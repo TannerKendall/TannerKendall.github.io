@@ -1,0 +1,10 @@
+com\tk\dvdlibrary\dto\DVD.class
+com\tk\dvdlibrary\dao\DVDLibraryDaoFileImpl.class
+com\tk\dvdlibrary\dao\DVDLibraryDao.class
+com\tk\dvdlibrary\dao\DVDLibraryDaoException.class
+com\tk\dvdlibrary\ui\UserIOConsoleImpl.class
+com\tk\dvdlibrary\App.class
+com\tk\dvdlibrary\ui\DVDLibraryView.class
+com\tk\dvdlibrary\controller\DVDLibraryController.class
+com\tk\dvdlibrary\ui\UserIO.class
+com\tk\dvdlibrary\dao\DVDLibraryDaoStub.class

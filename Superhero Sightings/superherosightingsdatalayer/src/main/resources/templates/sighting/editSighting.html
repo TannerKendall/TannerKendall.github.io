@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <div th:replace="htmlInserts/head"></div>
+  </head>
+  <body>
+    <!-- Main Body of Page -->
+
+    <div class="container">
+        
+        <!--Header-->
+        <div class="row m-4">
+            <div id="header" class="col text-center nes-container is-rounded">
+                <h1>Edit Sighting</h1>
+            </div>
+        </div>
+        <!--End Header-->
+        
+        <!--nav-->
+        <div th:replace="htmlInserts/navbar"></div>
+        <!--End Nav-->
+        
+        <!--Insights-->
+        <!--End Insights-->
+        
+        <!--Edit form-->
+        <div class="row m-4 nes-container with-title">
+            <p class="title">Edit Sighting</p>
+            
+            <div class="col-12 text-center m-3">
+                <form action="editSighting" method="POST">
+                    
+                    <input type="hidden" name="id" th:value="${sighting.id}" id="id"/>
+                    
+                    <div class="form-group row">
+                        <label for="superhero" class="col-3 col-form-label">Superhero</label>
+                        
+                        <div class="col-9">
+                            <select id="superheroId" name="superheroId" class="form-control">
+                                <option th:each="superhero : ${superheroes}"
+                                        th:value="${superhero.id}"
+                                        th:text="${superhero.name}"
+                                        th:selected="${superhero.sightings.contains(sighting)}">Superhero Name</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label for="location" class="col-3 col-form-label">Location</label>
+                        
+                        <div class="col-9">
+                            <select id="locationId" name="locationId" class="form-control">
+                                <option th:each="location : ${locations}"
+                                        th:value="${location.id}"
+                                        th:text="${location.name
+                                        + ' ('
+                                        + location.latitude
+                                        +' , '
+                                        + location.longitude
+                                        + ')'}"
+                                        th:selected="${sighting.location.equals(location)}">Location</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label for="sightingDate" class="col-3 col-form-label">Sighting Date</label>
+                        
+                        <div class="col-9">
+                            
+                            <div th:if="${#fields.hasErrors('sighting.sightingDate')}">
+                                <p th:each="error : ${#fields.errors('sighting.sightingDate')}" class="alert alert-danger" 
+                                   th:text="${error}"></p>
+                            </div>
+                            
+                            <input type="text" name="sightingDate" placeholder="yyyy-mm-dd" th:value="${sighting.sightingDate}" id="sightingDate" class="form-control"/>
+                                
+                        </div>
+                    </div>
+                    
+                    <div class="row m-4">
+                        <div class="col text-center m-4">
+                            <a href="/sightings" class="btn nes-btn is-error btn-lg">Back</a>
+                        </div>
+                        
+                        <button type="submit" class="col m-4 nes-btn is-success btn-lg">Edit Sighting</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+        <!--End Form-->
+        
+    </div>
+    
+    <!-- End main body -->
+    
+    <div th:replace="htmlInserts/endingScripts"></div>
+  </body>
+</html>

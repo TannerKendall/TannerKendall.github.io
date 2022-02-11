@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <div th:replace="htmlInserts/head"></div>
+  </head>
+  <body>
+    <!-- Main Body of Page -->
+
+    <div class="container">
+        
+        <!--Header-->
+        <div class="row m-4">
+            <div id="header" class="col text-center nes-container is-rounded">
+                <h1>Superhero Details</h1>
+            </div>
+        </div>
+        <!--End Header-->
+        
+        <!--nav-->
+        <div th:replace="htmlInserts/navbar"></div>
+        <!--End Nav-->
+        
+        <!--Details-->
+        <div class="row m-4 nes-container is-rounded">
+            
+            <div class="col-6 text-right"><strong>ID</strong></div>
+            <div class="col-6 text-left">
+                <span th:text="${superhero.id}">display id</span>
+            </div>
+            <hr>
+            
+            <div class="col-6 text-right"><strong>Name</strong></div>
+            <div class="col-6 text-left">
+                <span th:text="${superhero.name}">display name</span>
+            </div>
+            <hr>
+            
+            <div class="col-6 text-right"><strong>Alignment</strong></div>
+            <div class="col-6 text-left">
+                <span th:if="${superhero.isHero}">Superhero</span>
+                <span th:unless="${superhero.isHero}">Supervillain</span>
+            </div>
+            <hr>
+            
+            <div class="col-6 text-right"><strong>Description</strong></div>
+            <div class="col-6 text-left">
+                <span th:text="${superhero.description}">display description</span>
+            </div>
+            <hr>
+            
+            <div class="col-6 text-right"><strong>Superpowers</strong></div>
+            <div class="col-6 text-left">
+                <span th:each="superpower : ${superhero.superpowers}">
+                    <span th:text="${superpower.name}">display superpower</span><br/>
+                </span>
+            </div>
+            <hr>
+            
+            <div class="col-6 text-right"><strong>Organizations</strong></div>
+            <div class="col-6 text-left">
+                <span th:each="organization : ${organizations}">
+                    <span th:text="${organization.name}">display organization</span><br/>
+                </span>
+            </div>
+            <hr>
+            
+            <!--sightings-->
+            <div class="col-6 text-right"><strong>Sightings</strong></div>
+            <div class="col-6 text-left">
+                <span th:each="sighting : ${superhero.sightings}">
+                    <span th:text="${
+                          sighting.location.name
+                          + ' ('
+                          + sighting.location.latitude
+                          + ' , '
+                          + sighting.location.longitude
+                          + ')'}">display sighting</span><br/><hr/>
+                </span>
+            </div>
+            <hr>
+        </div>
+        
+        <!--End details-->
+        <!--Image-->
+        <div class="text-center">
+            <img th:if="${displayImg}"
+                 th:src="@{${'/images/' + superhero.id + '.jpg'}}"
+                 class="rounded" style="width:auto;height:600px;"/>
+        </div>
+        
+        <!--back button-->
+        <div class="row m-4">
+            <div class="col text-center m-4">
+                <a href="/superheroes" class="btn nes-btn is-error btn-lg">Back</a>
+            </div>
+        </div>    
+        
+    </div>
+    
+    <!-- End main body -->
+    
+    <div th:replace="htmlInserts/endingScripts"></div>
+  </body>
+</html>

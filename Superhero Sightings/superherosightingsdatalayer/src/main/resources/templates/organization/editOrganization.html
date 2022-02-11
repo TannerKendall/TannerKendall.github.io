@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <div th:replace="htmlInserts/head"></div>
+  </head>
+  <body>
+    <!-- Main Body of Page -->
+
+    <div class="container">
+        
+        <!--Header-->
+        <div class="row m-4">
+            <div id="header" class="col text-center nes-container is-rounded">
+                <h1>Edit Organization</h1>
+            </div>
+        </div>
+        <!--End Header-->
+        
+        <!--nav-->
+        <div th:replace="htmlInserts/navbar"></div>
+        <!--End Nav-->
+        
+        <!--Insights-->
+        <!--End Insights-->
+        
+        <!--Edit form-->
+        <div class="row m-4 nes-container with-title">
+            <p class="title">Edit Organization</p>
+            
+            <div class="col-12 text-center m-3">
+                <form action="/organization/editOrganization" method="POST">
+                    
+                    <input type="hidden" name="id" th:value="${organization.id}" id="organizationId"/>
+                    
+                    <div class="form-group row">
+                        <label for="name" class="col-3 col-form-label">Name</label>
+                        
+                        <div class="col-9">
+                            
+                            <div th:if="${#fields.hasErrors('organization.name')}">
+                                <p th:each="error : ${#fields.errors('organization.name')}" class="alert alert-danger" 
+                                   th:text="${error}"></p>
+                            </div>
+                            
+                            <input type="text" name="name" th:value="${organization.name}" id="name" class="form-control"/>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label for="isHero" class="col-3 col-form-label">Alignment</label>
+                        
+                        <div class="col-9">
+                            <select id="isHero" name="isHero" class="form-control">
+                                <option value="true" th:selected="${organization.isHero}">Hero</option>
+                                <option value="false" th:value="${!organization.isHero}">Villain</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        
+                        <label for="description" class="col-3 col-form-label">Description</label>
+                        
+                        <div class="col-9">
+                            
+                            <div th:if="${#fields.hasErrors('organization.description')}">
+                                <p th:each="error : ${#fields.errors('organization.description')}" class="alert alert-danger" 
+                                   th:text="${error}"></p>
+                            </div>
+                            
+                            <textarea type="textArea" name="description" th:text="${organization.description}" id="description" class="form-control"></textarea>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label for="address" class="col-3 col-form-label">Address</label>
+                        
+                        <div class="col-9">
+                            
+                            <div th:if="${#fields.hasErrors('organization.address')}">
+                                <p th:each="error : ${#fields.errors('organization.address')}" class="alert alert-danger" 
+                                   th:text="${error}"></p>
+                            </div>
+                            
+                            <textarea type="textArea" name="address" th:text="${organization.address}" id="address" class="form-control"></textarea>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label for="contact" class="col-3 col-form-label">Contact Info</label>
+                        
+                        <div class="col-9">
+                            
+                            <div th:if="${#fields.hasErrors('organization.contact')}">
+                                <p th:each="error : ${#fields.errors('organization.contact')}" class="alert alert-danger" 
+                                   th:text="${error}"></p>
+                            </div>
+                            
+                            <textarea type="textArea" name="contact" th:text="${organization.contact}" id="contact" class="form-control"></textarea>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="form-group-row">
+                        <label for="orgMembers" class="col-3 col-form-label">Members</label>
+                    </div>
+                    <div class="col-9">
+                        <select multiple id="superheroId" name="superheroId" class="form-control">
+                            <option th:each="superhero : ${superheroes}"
+                                    th:value="${superhero.id}"
+                                    th:text="${superhero.name}"
+                                    th:selected="${organization.orgMembers.contains(superhero)}">Superhero Name</option>
+                        </select>
+                    </div>
+                    
+                    <div class="row m-4">
+                        <div class="col text-center m-4">
+                            <a href="/organizations" class="btn nes-btn is-error btn-lg">Back</a>
+                        </div>
+                        
+                        <button type="submit" class="col m-4 nes-btn is-success btn-lg">Edit Organization</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+        <!--End Form-->
+        
+    </div>
+    
+    <!-- End main body -->
+    
+    <div th:replace="htmlInserts/endingScripts"></div>
+  </body>
+</html>
+
+
