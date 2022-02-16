@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.tk.vendingmachine.service.VendingMachineServiceLayerImplTest" time="0.022" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.tk.vendingmachine.service.VendingMachineServiceLayerImplTest" time="0.082" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.9.1+1"/>
     <property name="sun.boot.library.path" value="C:\Program Files\AdoptOpenJDK\jdk-11.0.9.101-hotspot\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\repos\classwork\VendingMachine"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\portfolio\Vending Machines\VendingMachine"/>
     <property name="java.vm.vendor" value="AdoptOpenJDK"/>
     <property name="java.vendor.url" value="https://adoptopenjdk.net/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\repos\classwork\VendingMachine"/>
+    <property name="user.dir" value="C:\portfolio\Vending Machines\VendingMachine"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="java.runtime.version" value="11.0.9.1+1"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
@@ -28,7 +28,7 @@
     <property name="maven.ext.class.path" value="C:\Program Files\NetBeans-12.0\netbeans\java\maven-nblib\netbeans-eventspy.jar"/>
     <property name="classworlds.conf" value="C:\Program Files\NetBeans-12.0\netbeans\java\maven\bin\..\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\AdoptOpenJDK\jdk-11.0.9.101-hotspot\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\AdoptOpenJDK\jdk-11.0.9.101-hotspot\bin;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Users\Toomie\AppData\Local\Microsoft\WindowsApps;C:\Users\Toomie\AppData\Local\atom\bin;C:\Users\Toomie\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Toomie\AppData\Local\Microsoft\WindowsApps;;."/>
+    <property name="java.library.path" value="C:\Program Files\AdoptOpenJDK\jdk-11.0.9.101-hotspot\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\AdoptOpenJDK\jdk-11.0.9.101-hotspot\bin;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Toomie\AppData\Local\Microsoft\WindowsApps;C:\Users\Toomie\AppData\Local\atom\bin;C:\Users\Toomie\AppData\Local\Microsoft\WindowsApps;C:\Users\Toomie\AppData\Local\Programs\Microsoft VS Code\bin;."/>
     <property name="maven.conf" value="C:\Program Files\NetBeans-12.0\netbeans\java\maven\bin\../conf"/>
     <property name="jdk.debug" value="release"/>
     <property name="java.class.version" value="55.0"/>
@@ -63,9 +63,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testPurchaseSnackThrowsNoItemInInventoryException" classname="com.tk.vendingmachine.service.VendingMachineServiceLayerImplTest" time="0"/>
-  <testcase name="testGetSnack" classname="com.tk.vendingmachine.service.VendingMachineServiceLayerImplTest" time="0"/>
-  <testcase name="testPurchaseSnackThrowsInsufficientFundsException" classname="com.tk.vendingmachine.service.VendingMachineServiceLayerImplTest" time="0"/>
-  <testcase name="testPurchaseSnack" classname="com.tk.vendingmachine.service.VendingMachineServiceLayerImplTest" time="0.018"/>
-  <testcase name="testGetAllSnacks" classname="com.tk.vendingmachine.service.VendingMachineServiceLayerImplTest" time="0.001"/>
+  <testcase name="testPurchaseSnackThrowsNoItemInInventoryException" classname="com.tk.vendingmachine.service.VendingMachineServiceLayerImplTest" time="0.012"/>
+  <testcase name="testGetSnack" classname="com.tk.vendingmachine.service.VendingMachineServiceLayerImplTest" time="0.016"/>
+  <testcase name="testPurchaseSnackThrowsInsufficientFundsException" classname="com.tk.vendingmachine.service.VendingMachineServiceLayerImplTest" time="0.015"/>
+  <testcase name="testPurchaseSnack" classname="com.tk.vendingmachine.service.VendingMachineServiceLayerImplTest" time="0.026"/>
+  <testcase name="testGetAllSnacks" classname="com.tk.vendingmachine.service.VendingMachineServiceLayerImplTest" time="0.012"/>
 </testsuite>

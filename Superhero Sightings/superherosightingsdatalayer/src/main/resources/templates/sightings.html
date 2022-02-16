@@ -66,6 +66,15 @@
                             <td th:text="${sighting.sightingDate}">Date</td>
                             <td><a href="#" th:href="@{/sighting/editSighting(id=${sighting.id})}">Edit</a></td>
                             <td><a href="#" onclick="return confirm('Are you sure you wish to delete the Sighting?')" th:href="@{/sighting/deleteSighting(id=${sighting.id})}">Delete</a></td>
+                            
+                            <script th:inline="javascript">
+                                var list = /*[[${sightings}]]*/ [];
+                            </script>
+                            <input type="hidden" id="sightingLat" th:value="${sighting.location.latitude}"/>
+                            <input type="hidden" id="sightingLng" th:value="${sighting.location.longitude}"/>
+                            <input type="hidden" id="sightingDate" th:value="${sighting.sightingDate}"/>
+                            <input type="hidden" id="sightingLocationName" th:value="${sighting.location.name}"/>
+                            <input type="hidden" id="sightingHero" th:value="${superheroSightings.get(sighting).name}"/>
                         </tr>
                     </tbody>
                 </table>
