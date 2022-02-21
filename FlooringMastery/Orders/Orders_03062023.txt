@@ -1,0 +1,2 @@
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total
+1,tanner,WA,9.25,HardWood,5674.00,3.00,4.50,17022.00,25533.00,3936.34,46491.34

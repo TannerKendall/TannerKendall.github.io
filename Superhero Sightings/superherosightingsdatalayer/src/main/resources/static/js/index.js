@@ -50,11 +50,11 @@ function initMap(){
     
     sightings.forEach(sighting => {
         
-        var latitude = parseFloat($("#sightingLat").val());
-        var longitude = parseFloat($("#sightingLng").val());
+        var latitude = sighting.location.latitude;
+        var longitude = sighting.location.longitude;
         var name = $("#sightingHero").val();
-        var locationName = $("#sightingLocationName").val();
-        var sightingDate = $("#sightingDate").val();
+        var locationName = sighting.location.name;
+        var sightingDate = sighting.sightingDate;
         
         var props = {
                     coords:{lat: latitude, lng: longitude},
