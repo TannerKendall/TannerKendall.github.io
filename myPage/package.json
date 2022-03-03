@@ -1,0 +1,16 @@
+{
+  "name": "mypage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d myPage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://TannerKendall.github.io/",
+  "dependencies": {
+    "gh-pages": "^1.2.0"
+  }
+}
