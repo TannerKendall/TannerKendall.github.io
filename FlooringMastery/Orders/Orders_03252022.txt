@@ -1,0 +1,2 @@
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total
+1,Tanner,WA,9.25,Laminate,45.00,1.75,2.10,78.75,94.50,16.03,189.28

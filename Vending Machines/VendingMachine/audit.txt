@@ -61,3 +61,5 @@
 2021-04-19T14:15:21.273315400 : Snack: Frito's purchased.
 2021-04-19T15:13:18.558682700 : Snack: Lay's purchased.
 2021-04-19T15:17:53.889993200 : Snack: Skittles purchased.
+2022-03-16T17:54:23.917300900 : Snack: Frito's purchased.
+2022-03-16T17:55:21.139376500 : Snack: 3Dorito's purchased.
