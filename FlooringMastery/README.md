@@ -1,3 +1,5 @@
+Flooring Mastery; Java -- A CRUD console application following MVC pattern for a fictional flooring company. The program utilizies Spring Dependency Injection, and allows users to display, add, edit, and remove orders. The data is stored and audited in external files.
+
 ![menu](https://user-images.githubusercontent.com/75656857/159104433-972627bc-b8e3-4a4b-aac1-587de4d578aa.png)
 
 ![addOrder](https://user-images.githubusercontent.com/75656857/159104443-fecb3390-8e83-46f5-a8f6-8dacba422366.png)
