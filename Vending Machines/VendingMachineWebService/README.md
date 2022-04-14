@@ -1,3 +1,4 @@
+Vending Machine Web Service - Created a web page that interacts with an externally hosted Vending Machine REST Service using JavaScript and jQuery Ajax requests. The webpage is designed using HTML & CSS and allows the user to view available items, add money, select item for purchase, purchase item, and receive change.
 
 ![vendingWeb](https://user-images.githubusercontent.com/75656857/159104515-a77a9a04-7ab0-4847-a9cd-52202717585f.png)
 
