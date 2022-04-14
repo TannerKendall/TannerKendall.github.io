@@ -1,3 +1,4 @@
+Hotel Reservation Database; SQL -- A SQL database schema and creation script for a theoretical hotel. Sample data and queries are included as well.
 
 ![TannerKendall-HotelERD2](https://user-images.githubusercontent.com/75656857/159104562-2429f59d-0281-44a1-a533-807d2794dd6e.jpg)
 
