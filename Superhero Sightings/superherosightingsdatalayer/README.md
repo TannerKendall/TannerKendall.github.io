@@ -1,3 +1,5 @@
+Superhero Sightings; Java, HTML&CSS, JavaScript, SQL, Spring Boot -- Utilized Spring Boot and Thymeleaf, alongside Java to create a full stack Java web app. I've also used HTML&CSS and JavaScript for the UI. The user is able to create superhero and supervillain organizations comprised of many heroes or villains, and they're associated superpowers. The application also allows users to report and view sightings either by form, or via a Google Maps API.
+
 ![home](https://user-images.githubusercontent.com/75656857/159104350-9db783c4-a76e-4f9f-b238-ce99676b18cf.png)
 
 
